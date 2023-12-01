@@ -1,4 +1,4 @@
-class StationController < ApplicationController
+class StationTrainsController < ApplicationController
   def index
     # [ ] done
 
