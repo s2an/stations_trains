@@ -26,8 +26,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_01_225723) do
     t.string "train_type"
     t.integer "capacity"
     t.boolean "is_express"
+    t.bigint "station_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["station_id"], name: "index_trains_on_station_id"
   end
 
+  add_foreign_key "trains", "stations"
 end

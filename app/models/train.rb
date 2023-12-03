@@ -1,3 +1,3 @@
 class Train < ApplicationRecord
-  belongs_to :stations
+  belongs_to :station
 end

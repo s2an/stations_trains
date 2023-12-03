@@ -4,7 +4,8 @@ class Trains < ActiveRecord::Migration[7.0]
       t.string :train_type
       t.integer :capacity
       t.boolean :is_express
-
+      t.references :station, null: false, foreign_key: true
+     
       t.timestamps
     end
   end
