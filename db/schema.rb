@@ -14,4 +14,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_01_225723) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "stations", force: :cascade do |t|
+    t.string "name"
+    t.integer "platform_count"
+    t.boolean "food_stand"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trains", force: :cascade do |t|
+    t.string "train_type"
+    t.integer "capacity"
+    t.boolean "is_express"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

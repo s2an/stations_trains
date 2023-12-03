@@ -1,5 +1,10 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# RSpec.describe Train, type: :module do
+RSpec.describe Train, type: :module do
+  it 'exists' do
+    train = Train.new(train_type: "Two-Rail", capacity: 442, is_express: false)
 
-# end
+    expect(train).to be_valid
+  end
+
+end
