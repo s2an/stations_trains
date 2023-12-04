@@ -28,4 +28,20 @@ RSpec.describe Train, type: :feature do
     expect(page).to have_content(train2.is_express ? "Yes" : "No" )
   end
 
+  it 'I1,US4: A visitor sees the childs attributes by their id' do
+    # User Story 4, Child Show [ √ ] done
+    # As a visitor
+    # When I visit '/child_table_name/:id'
+    # Then I see the child with that id including the child's attributes
+    # (data from each column that is on the child table)
+    station = Station.create!(name: "Roanoke Station", platform_count: 1, food_stand: false)
+    train = Train.create!(train_type: "Two-Rail", capacity: 442, is_express: false, station: station)
+    
+    visit "/trains/#{train.id}"
+
+    expect(page).to have_content(train.train_type)
+    expect(page).to have_content(train.capacity)
+    expect(page).to have_content(train.is_express ? "Yes" : "No" )
+  end
+
 end

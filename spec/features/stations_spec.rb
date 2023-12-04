@@ -6,7 +6,7 @@ RSpec.describe Station, type: :feature do
     expect(station).to be_valid
   end
 
-  it 'I1,US1: A visitor sees the name of each station recod in the system' do
+  it 'I1,US1: A visitor sees the name of each station record in the system' do
     # User Story 1, Parent Index [ √ ] done
     # For each parent table
     # As a visitor
