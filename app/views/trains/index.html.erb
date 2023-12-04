@@ -1,6 +1,9 @@
 <h1>Trains!</h1>
 
-<%# <ul>
-  <li><a href="/tasks">Task Index</a></li>
-  <li><a href="/tasks/new">New Task</a></li>
-</ul> %>
+<% @trains.each do |train| %>
+  <p>
+    Train Type: <%= train.train_type %><br>
+    Capacity: <%= train.capacity %><br>
+    Express?: <%= train.is_express ? "Yes" : "No" %>
+  </p>
+<% end %>

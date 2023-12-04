@@ -35,4 +35,6 @@ RSpec.describe Station, type: :feature do
     expect(page).to have_content(station.platform_count)
     expect(page).to have_content(station.food_stand ? "Yes" : "No" )
   end
+  
+
 end
