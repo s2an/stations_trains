@@ -84,4 +84,6 @@ RSpec.describe Station, type: :feature do
 
     expect(page).to have_content(station.trains.count)
   end
+
+
 end

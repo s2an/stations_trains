@@ -12,4 +12,4 @@ Train.create!(train_type: "Monorail", capacity: 88, is_express: true, station: s
 station2 = Station.create!(name: "Lexington Station", platform_count: 2 , food_stand: true)
 Train.create!(train_type: "Three-Rail", capacity: 33, is_express: true, station: station2)
 Train.create!(train_type: "Two-Rail", capacity: 44, is_express: false, station: station2)
-station2 = Station.create!(name: "NewKid Station", platform_count: 8 , food_stand: true)
+station3 = Station.create!(name: "NewKid Station", platform_count: 8 , food_stand: true)
