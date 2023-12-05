@@ -71,4 +71,5 @@ RSpec.describe Station, type: :feature do
     expect(page).to have_content(station2.created_at)
   end
 
+  
 end
