@@ -45,8 +45,8 @@ RSpec.describe Station, type: :feature do
     station = Station.create!(name: "Roanoke Station", platform_count: 1, food_stand: false)
     train1 = Train.create!(train_type: "Two-Rail", capacity: 442, is_express: false, station: station)
     train2 = Train.create!(train_type: "Monorail", capacity: 88, is_express: true, station: station)
-
-    visit "/stations/#{station.id}/station_trains"
+    
+    visit "/stations/#{station.id}/trains"
 
     expect(page).to have_content(train1.train_type)
     expect(page).to have_content(train1.capacity)
@@ -62,5 +62,13 @@ RSpec.describe Station, type: :feature do
     # When I visit the parent index,
     # I see that records are ordered by most recently created first
     # And next to each of the records I see when it was created
+    station1 = Station.create!(name: "Roanoke Station", platform_count: 1, food_stand: false)
+    station2 = Station.create!(name: "Lexington Station", platform_count: 2 , food_stand: true)
+
     visit "/stations/"
+
+    expect(page).to have_content(station1.created_at)
+    expect(page).to have_content(station2.created_at)
+  end
+
 end
