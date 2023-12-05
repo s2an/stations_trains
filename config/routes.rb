@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get "/stations/:id", to: "stations#show"
   get "/trains", to: "trains#index"
   get "/trains/:id", to: "trains#show"
-  get "/stations/:station_id/trains", to: "trains#index"
+  get "/stations/:station_id/trains", to: "station_trains#index"
 end

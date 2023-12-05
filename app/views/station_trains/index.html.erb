@@ -1,9 +1,10 @@
-<h1>All Trains!</h1>
+<h1>Trains at <%= @station.name %></h1>
 
 <% @trains.each do |train| %>
   <p>
+    id#: <%= train.id %><br>
     Train Type: <%= train.train_type %><br>
     Capacity: <%= train.capacity %><br>
-    Express?: <%= train.is_express ? "Yes" : "No" %>
+    Express?: <%= train.is_express ? 'Yes' : 'No' %>
   </p>
 <% end %>
