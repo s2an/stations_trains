@@ -36,8 +36,22 @@ RSpec.describe StationTrainsController, type: :feature do
     expect(page).to have_content(station.trains.count)
   end
 
-  # it 'I1,US10: A visitor sees a link to the parents childs id page from thier show page' do
+  it 'I1,US10: A visitor sees a link to the parents childs id page from thier show page' do
     # User Story 10 Parent Child Index Link [ √ ] done
+    # As a visitor
+    # When I visit a parent show page ('/parents/:id')
+    # Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name')
+    station = Station.create!(name: "Roanoke Station", platform_count: 1, food_stand: false)
+    Train.create!(train_type: "Two-Rail", capacity: 442, is_express: false, station: station)
+    Train.create!(train_type: "Monorail", capacity: 88, is_express: true, station: station)
+
+    visit "/stations/#{station.id}"
+    expect(page).to have_link("Station_Trains Index", href: "station_trains#index")
+
+    click_link "Station_Trains Index"
+    expect(current_path).to eq("station_trains#index")
+  end
+
 
 
 
