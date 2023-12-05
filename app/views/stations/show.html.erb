@@ -2,5 +2,7 @@
 
 <p>
   Platform Count: <%= @station.platform_count %><br>
-  Food Stand?: <%= @station.food_stand ? "Yes" : "No" %>
+  Food Stand?: <%= @station.food_stand ? "Yes" : "No" %><br>
+  <br>
+  Trains Available: <%= @station.trains.count %>
 </p>

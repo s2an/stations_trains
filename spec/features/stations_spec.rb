@@ -65,11 +65,23 @@ RSpec.describe Station, type: :feature do
     station1 = Station.create!(name: "Roanoke Station", platform_count: 1, food_stand: false)
     station2 = Station.create!(name: "Lexington Station", platform_count: 2 , food_stand: true)
 
-    visit "/stations/"
+    visit "/stations"
 
     expect(page).to have_content(station1.created_at)
     expect(page).to have_content(station2.created_at)
   end
 
-  
+  it 'I1,US7: A visitor sees one parent and counts their associated children' do
+    # User Story 7 Parent Child Count [ √ ] done
+    # As a visitor
+    # When I visit a parent's show page
+    # I see a count of the number of children associated with this parent
+    station = Station.create!(name: "Roanoke Station", platform_count: 1, food_stand: false)
+    Train.create!(train_type: "Two-Rail", capacity: 442, is_express: false, station: station)
+    Train.create!(train_type: "Monorail", capacity: 88, is_express: true, station: station)
+    
+    visit "/stations/#{station.id}"
+
+    expect(page).to have_content(station.trains.count)
+  end
 end
