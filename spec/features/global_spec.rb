@@ -26,4 +26,29 @@ RSpec.describe 'Global', type: :feature do
     expect(current_path).to eq(trains_path)
   end
 
+  it 'I1,US9: A visitor sees a link to the parent index on every page' do
+    # User Story 9 Parent Index Link [ √ ] done
+    # As a visitor
+    # When I visit any page on the site
+    # Then I see a link at the top of the page that takes me to the Parent Index
+    station = Station.create!(name: "Roanoke Station", platform_count: 1, food_stand: false)
+    train = Train.create!(train_type: "Two-Rail", capacity: 442, is_express: false, station: station)
+    
+    visit "/stations"
+    expect(page).to have_link("Station Index", href: stations_path)
+    
+    visit "/stations/#{station.id}"
+    expect(page).to have_link("Station Index", href: stations_path)
+    
+    visit "/trains"
+    expect(page).to have_link("Station Index", href: stations_path)
+    
+    visit "/trains/#{train.id}"
+    expect(page).to have_link("Station Index", href: stations_path)
+    
+    click_link "Station Index"
+    expect(current_path).to eq(stations_path)
+  end
+
+
 end
