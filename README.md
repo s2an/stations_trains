@@ -23,6 +23,6 @@ from terminal: $ bundle exec rspec
 from terminal: $ rails s  
 from browser: http://localhost:3000
 
-* Database Design Document: 
-https://erd.dbdesigner.net/designer/schema/1701208754-relational-train-stations  
-(There were some modifications since submittal.)
+* Database Design Document 
+![Database Design](image.png)
+I remember the day my cat walked across my keyboard and threw some extra letters in there, I had deleted everything except the semi-colon after station in the markup area!
