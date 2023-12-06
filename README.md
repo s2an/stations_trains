@@ -4,25 +4,25 @@
 
 ##### Please don't mind the mismatch between this app and the github repository...
 
-* Ruby version
+* Ruby version  
 7.0.8
 
-* System dependencies
+* System dependencies  
 See Gemfile for gems
 
-* Configuration
+* Configuration  
 from terminal: $ bundle install
 
-* Database
+* Database  
 PostgreSQL
 
-* How to run the test suite:
+* How to run the test suite  
 from terminal: $ bundle exec rspec
 
-* Deployment instructions:
-from terminal: $ rails s
+* Deployment instructions  
+from terminal: $ rails s  
 from browser: http://localhost:3000
 
 * Database Design Document: 
-https://erd.dbdesigner.net/designer/schema/1701208754-relational-train-stations
+https://erd.dbdesigner.net/designer/schema/1701208754-relational-train-stations  
 (There were some modifications since submittal.)
