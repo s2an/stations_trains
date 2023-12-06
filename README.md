@@ -1,8 +1,8 @@
 ## README
 
-### ALL ABOARD!: Welcome to the relational_train_station!
+### ALL ABOARD: Welcome to the relational_train_station!
 
-##### Please don't mind the mismatch between this app and the github repository...
+##### (Please don't mind the mismatch between the web app name and the github repository name...)
 
 * Ruby version  
 7.0.8
