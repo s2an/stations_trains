@@ -1,24 +1,28 @@
-# README
+## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### ALL ABOARD!: Welcome to the relational_train_station!
 
-Things you may want to cover:
+##### Please don't mind the mismatch between this app and the github repository...
 
 * Ruby version
+7.0.8
 
 * System dependencies
+See Gemfile for gems
 
 * Configuration
+from terminal: $ bundle install
 
-* Database creation
+* Database
+PostgreSQL
 
-* Database initialization
+* How to run the test suite:
+from terminal: $ bundle exec rspec
 
-* How to run the test suite
+* Deployment instructions:
+from terminal: $ rails s
+from browser: http://localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database Design Document: 
+https://erd.dbdesigner.net/designer/schema/1701208754-relational-train-stations
+(There were some modifications since submittal.)
